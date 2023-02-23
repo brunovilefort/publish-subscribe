@@ -1,0 +1,25 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": "@rocketseat/eslint-config/node",
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": ["eslint-plugin-import-helpers"],
+    "rules": {
+      "import-helpers/order-imports": [
+        "warn",
+        {
+          "newlinesBetween": "always",
+          "groups": ["module", "/^@/", ["parent", "sibling", "index"]],
+          "alphabetize": { "order": "asc", "ignoreCase": true }
+        }
+      ]
+    }
+}
